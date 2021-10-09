@@ -80,5 +80,6 @@ char *binary_digit_conversion(int number, int length)
         *(retans + idx) = (temp_int == 1) ? '1' : '0';
         number /= 2;
     }
+    free(retans);
     return retans;
 }
