@@ -58,38 +58,4 @@ public class knuth_moris_patts {
     }
 }
 
-// public static boolean solution(int[] pattern, String string, String
-// substring) {
-// int i = 0;
-// int j = 0;
-// while (i < string.length()) {
-// if (j == substring.length()) {
-// return true;
-// }
-// if (string.charAt(i) == substring.charAt(j)) {
-// i++;
-// j++;
-// } else if (j > 0) {
-// j = pattern[j - 1] + 1;
-// } else {
-// i++;
-// }
-// }
-// return false;
-// }
-
-// public static void solution_patternfinding(String subString, int[] pattern) {
-// int i = 1;
-// int j = 0;
-// while (i < pattern.length) {
-// if (subString.charAt(i) == subString.charAt(j)) {
-// pattern[i] = j;
-// i++;
-// j++;
-// } else if (j > 0) {
-// j = pattern[j - 1] + 1;
-// } else {
-// i++;
-// }
-// }
-// }
+\
