@@ -2,11 +2,11 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdbool.h>
-#define SIZE 30
+#define SIZE 50
 struct tries
 {
     char data;
-    struct tries *children[30];
+    struct tries *children[SIZE];
 };
 struct tries *getspace()
 {
