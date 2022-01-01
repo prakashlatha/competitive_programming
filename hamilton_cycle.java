@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-public class hamolton_cycle {
+public class hamilton_cycle {
     public static class graph {
         int node;
         HashSet<graph> connects = new HashSet<>();
@@ -57,14 +57,14 @@ public class hamolton_cycle {
         }
     }
 
-    public static boolean iterate(graph current, ArrayList<graph> visited, graph head) {
+    public static void iterate(graph current, ArrayList<graph> visited, graph head) {
         if (current.equals(head) && visited.size() == number_of_nodes) {
             ans_path.add(new ArrayList<graph>(visited));
             visited.add(current);
-            return true;
+            return;
         }
         if (visited.contains(current)) {
-            return false;
+            return;
         }
         ArrayList<graph> visited_copy = new ArrayList<>(visited);
         visited_copy.add(current);
@@ -72,6 +72,6 @@ public class hamolton_cycle {
         for (graph hold : list) {
             iterate(hold, visited_copy, head);
         }
-        return false;
+        return;
     }
 }
